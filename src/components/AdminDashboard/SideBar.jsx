@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../style/Sidebar.css";
 
 const SideBar = ({ activeSection, setActiveSection }) => {
@@ -22,7 +23,13 @@ const SideBar = ({ activeSection, setActiveSection }) => {
             className={activeSection === item.id ? "active" : ""}
             onClick={() => setActiveSection(item.id)}
           >
-            {item.label}
+            {item.id === "orderHistory" ? (
+              <Link to="/orderHistory" style={{ textDecoration: "none", color: "inherit" }}>
+                {item.label}
+              </Link>
+            ) : (
+              item.label
+            )}
           </li>
         ))}
       </ul>

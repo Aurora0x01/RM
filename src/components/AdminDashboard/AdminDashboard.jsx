@@ -3,9 +3,9 @@ import SideBar from "./SideBar";
 import RevenueCard from "./RevenueCard";
 import TransactionsTable from "./TransactionsTable";
 import IncomeChart from "./IncomeChart";
+import OrderHistory from "./OrderHistory";
 import EmployeeOfTheMonth from "./EmployeeOfTheMonth";
 import '../../style/AdminDashboard.css';
-
 
 const AdminDashboard = () => {
   // State to manage active section
@@ -41,10 +41,12 @@ const AdminDashboard = () => {
           </>
         )}
 
-        {/* Placeholder content for other sections */}
+        {/* Order History Section */}
         {activeSection === "orderHistory" && (
-          <h2 className="section-placeholder">Order History (Coming Soon)</h2>
+          <OrderHistory />
         )}
+
+        {/* Placeholder content for other sections */}
         {activeSection === "products" && (
           <h2 className="section-placeholder">Products Management (Coming Soon)</h2>
         )}
