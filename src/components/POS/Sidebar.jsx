@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sidebar = ({ categories, onSelectCategory }) => {
   return (
-    <aside className="sidebar">
+    <aside className="sidebardash">
       <ul>
         {categories.map((category, index) => (
           <li key={index} onClick={() => onSelectCategory(category)}>

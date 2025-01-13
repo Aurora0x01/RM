@@ -1,5 +1,5 @@
 import React from 'react';
-import OrderItem from './OrderItem';
+import OrderItem from '../POS/OrderItem';
 
 const OrderSummary = ({ order, onUpdateQuantity, onRemoveItem, onPlaceOrder }) => {
   const subtotal = order.reduce((sum, item) => sum + item.price * item.quantity, 0);

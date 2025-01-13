@@ -1,6 +1,7 @@
 import React from "react";
-import "./Header.css"; // External stylesheet for styling
-import logo from "./photos/logo.png";
+import '../../style/Header.css';
+ // External stylesheet for styling
+import logo from "../../components/photos/logo.png";
 
 
 const Header = () => {
